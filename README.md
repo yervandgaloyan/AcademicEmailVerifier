@@ -11,12 +11,12 @@ Identifies email addresses or domains names that belong to colleges or universit
 
 ## Import library:
 ```python
-    from AcademicEmailVerifier.EmailVerifier import verifier
+    from AcademicEmailVerifier import EmailVerifier
 ```
 
 ### Verify academic email address:
 ```python
-    verifier.isAcademic("your@academic.email")
+    EmailVerifier().isAcademic("your@academic.email")
 ```
 
 ## Support ##
