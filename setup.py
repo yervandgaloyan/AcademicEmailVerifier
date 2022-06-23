@@ -10,10 +10,6 @@ setup(
   url = 'https://github.com/yervandgaloyan/AcademicEmailVerifier/',
   download_url = 'https://github.com/yervandgaloyan/AcademicEmailVerifier/archive/refs/tags/v_01.tar.gz',
   keywords = ['EMAIL', 'ACADEMIC', 'VERIFIER'],
-  install_requires=[
-          're',
-          'os',
-      ],
   classifiers=[
     'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
