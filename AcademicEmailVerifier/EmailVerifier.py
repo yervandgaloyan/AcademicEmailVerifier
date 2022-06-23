@@ -6,8 +6,7 @@ class EmailVerifier:
     
     def isEmailValid(self, email):
         regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
-
-        
+                
         return re.fullmatch(regex, email)
         
     def domainToUrl(self, domain):
@@ -25,6 +24,3 @@ class EmailVerifier:
         url = self.domainToUrl(domain)
         path = getcwd() + '/domains/' + url
         return exists(path)
-
-if __name__ == "__main__":
-    verifier = EmailVerifier()
