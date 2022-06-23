@@ -1,7 +1,7 @@
 # Academic Email Verifier
 Identifies email addresses or domains names that belong to colleges or universities.
 
-(https://github.com/yervandgaloyan/AcademicEmailVerifier/blob/main/LICENSE)
+(https://github.com/yervandgaloyan/AcademicEmailVerifier/blob/main/LICENSE.txt)
 
 
 ## Installation
