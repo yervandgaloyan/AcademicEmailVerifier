@@ -1,1 +1,1 @@
-from AcademicEmailVerifier.EmailVerifier import EmailVerifier
+from AcademicEmailVerifier import EmailVerifier

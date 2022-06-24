@@ -4,7 +4,7 @@ setup(
   packages = ['AcademicEmailVerifier'],
   include_package_data=True,
   package_data = {'': ['domains/*.txt','domains/*/*.txt','domains/*/*/*.txt','domains/*/*/*/*.txt']},
-  version = '1.0',
+  version = '1.1',
   license='MIT',
   description = 'Identifies email addresses or domains names that belong to colleges or universities.',
   author = 'Yervand Galoyan',
