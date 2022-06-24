@@ -2,14 +2,15 @@ from distutils.core import setup
 setup(
   name = 'AcademicEmailVerifier',
   packages = ['AcademicEmailVerifier'],
-  package_data = {'AcademicEmailVerifier': ['domains/*.txt','domains/*/*.txt','domains/*/*/*.txt','domains/*/*/*/*.txt']},
-  version = '0.5',
+  include_package_data=True,
+  package_data = {'': ['domains/*.txt','domains/*/*.txt','domains/*/*/*.txt','domains/*/*/*/*.txt']},
+  version = '1.0',
   license='MIT',
   description = 'Identifies email addresses or domains names that belong to colleges or universities.',
   author = 'Yervand Galoyan',
   author_email = 'yervandgaloyan26@gmail.com',
   url = 'https://github.com/yervandgaloyan/AcademicEmailVerifier/',
-  download_url = 'https://github.com/yervandgaloyan/AcademicEmailVerifier/archive/refs/tags/v_05.tar.gz',
+  download_url = 'https://github.com/yervandgaloyan/AcademicEmailVerifier/archive/refs/tags/v_10.tar.gz',
   keywords = ['EMAIL', 'ACADEMIC', 'VERIFIER'],
   classifiers=[
     'Development Status :: 4 - Beta',

@@ -1,26 +1,23 @@
 import re
-from os.path import exists
-from os import getcwd
+import os
 
-class EmailVerifier:
+def isEmailValid(email):
+    regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+            
+    return True if re.fullmatch(regex, email) else False
     
-    def isEmailValid(self, email):
-        regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
-                
-        return re.fullmatch(regex, email)
-        
-    def domainToUrl(self, domain):
-        url = domain.split('.')
-        url[0] += '.txt'
-        url.reverse()
-        url = '/'.join(url)
-        
-        return url
+def domainToUrl(domain):
+    url = domain.split('.')
+    url[0] += '.txt'
+    url.reverse()
+    url = '/'.join(url)
     
-    def isAcademic(self, email):
-        if not self.isEmailValid(email):
-            return -1
-        domain = email.split('@')[-1]
-        url = self.domainToUrl(domain)
-        path = getcwd() + '/domains/' + url
-        return exists(path)
+    return url
+
+def isAcademic(email):
+    this_dir = os.path.split(__file__)[0]
+    DATA_PATH = os.path.join(this_dir, "domains/")
+    domain = email.split('@')[-1]
+    url = domainToUrl(domain)
+    path = DATA_PATH + url
+    return os.path.exists(path)
