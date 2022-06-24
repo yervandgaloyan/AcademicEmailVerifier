@@ -2,6 +2,7 @@ from distutils.core import setup
 setup(
   name = 'AcademicEmailVerifier',
   packages = ['AcademicEmailVerifier'],
+  package_data = {'AcademicEmailVerifier': ['domains/*.txt','domains/*/*.txt','domains/*/*/*.txt','domains/*/*/*/*.txt']},
   version = '0.4',
   license='MIT',
   description = 'Identifies email addresses or domains names that belong to colleges or universities.',
